@@ -50,7 +50,8 @@ class Student
     new_student
   end
 
-  find_by_name
+  def find_by_name
+  end
 
 
 end
