@@ -49,7 +49,8 @@ class Student
     new_student.grade = row[2]
     new_student
   end
-  
+
+  find_by_name
 
 
 end
