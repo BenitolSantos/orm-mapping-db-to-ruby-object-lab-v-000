@@ -51,6 +51,7 @@ class Student
   end
 
   def find_by_name
+    
   end
 
 
