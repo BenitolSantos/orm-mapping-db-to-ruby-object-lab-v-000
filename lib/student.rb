@@ -42,6 +42,7 @@ class Student
   end
 
   def self.new_from_db(row)
+    #converts what the database gives us into a ruby object
     new_student = self.new
     new_student.id = row[0]
     new_student.name = row[1]
@@ -49,5 +50,5 @@ class Student
     new_student
   end
 
-  
+
 end
