@@ -20,7 +20,7 @@ class Student
     # return a new instance of the Student class
     sql = <<-SQL
       SELECT *
-      FROM student
+      FROM students
       WHERE name = ?
       LIMIT 1
     SQL
@@ -55,5 +55,5 @@ class Student
     sql = "DROP TABLE IF EXISTS students"
     DB[:conn].execute(sql)
   end
-  
+
 end
