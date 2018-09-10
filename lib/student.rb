@@ -78,13 +78,13 @@ class Student
     end.first #Okay so this time you DO want to call .first at the end - currently you're getting an array and it wants to call .id on something
   end
 
-  def self.all_students_in_grade_X
+  def self.all_students_in_grade_X(x)
     sql = <<-SQL
     SELECT *
     FROM students WHERE grade = x
     SQL
 
-    DB[:conn].execute(sql).map do |row|
+    DB[:conn].execute(sql,x).map do |row|
       self.new_from_db(row)
     end
   end
