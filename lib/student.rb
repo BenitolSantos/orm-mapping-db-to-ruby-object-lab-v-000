@@ -27,7 +27,9 @@ class Student
     FROM students WHERE grade = 9
     SQL
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, name).map do |row|
+      self.new_from_db(row)
+    end.first
   end
 
   def self.students_below_12th_grade
@@ -36,7 +38,9 @@ class Student
     FROM students WHERE grade < 12
     SQL
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, name).map do |row|
+      self.new_from_db(row)
+    end.first
   end
 
   def self.find_by_name(name)
