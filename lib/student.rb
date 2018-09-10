@@ -65,7 +65,6 @@ class Student
     DB[:conn].execute(sql,x).map do |row|
       self.new_from_db(row)
     end
-    #Okay so this time you DO want to call .first at the end - currently you're getting an array and it wants to call .id on something
   end
 
   def self.first_student_in_grade_10
