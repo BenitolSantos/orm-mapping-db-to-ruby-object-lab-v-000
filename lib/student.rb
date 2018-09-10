@@ -21,7 +21,7 @@ class Student
     DB[:conn].execute(sql)
   end
 
-  def self.all
+  def self.all_students_in_grade_9
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
     sql = <<-SQL
